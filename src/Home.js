@@ -6,13 +6,19 @@ export default class Home extends Component{
     constructor(props){
         super(props)
         this.state={
-            orderBookLoaded: false
+            orderBookLoaded: false,
+            mode: 'full'
         }
     }
 
+    changeMode(mode){
+        this.setState({
+            mode: mode
+        })
+    }
 
     getData(){
-        setInterval(() => {
+        // setInterval(() => {
             axios.get("https://api.delta.exchange/orderbook/27/l2")
             .then(response => {
             this.setState({
@@ -20,7 +26,7 @@ export default class Home extends Component{
                 orderBookLoaded: true
             })
             })
-        }, 1000)
+        // }, 1000)
 
     }
 
@@ -36,7 +42,7 @@ export default class Home extends Component{
         }
         return(
             <React.Fragment>
-                <OrderBook orderBook={this.state.order_book} />
+                <OrderBook orderBook={this.state.order_book} changeMode={this.changeMode} mode={this.state.mode} />
             </React.Fragment>
         )
     }
