@@ -18,7 +18,7 @@ export default class Home extends Component{
     }
 
     getData(){
-        // setInterval(() => {
+        setInterval(() => {
             axios.get("https://api.delta.exchange/orderbook/27/l2")
             .then(response => {
             this.setState({
@@ -26,7 +26,7 @@ export default class Home extends Component{
                 orderBookLoaded: true
             })
             })
-        // }, 1000)
+        }, 1000)
 
     }
 

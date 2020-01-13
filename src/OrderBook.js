@@ -2,25 +2,36 @@ import React from 'react'
 
 export default function OrderBook(props){
     console.log(props.orderBook.data)
-    let green_total;
-    let red_total;
-    let buy_book_list = props.orderBook.data.buy_book.map((value, index) => 
-        (
+    let green_total = 0;
+    let red_total = 0;
+    
+    let buy_book_list = props.orderBook.data.buy_book.map((value, index) => {
+        if(green_total === 0){
+            green_total = value.size
+        }else{
+            green_total = green_total + value.size
+        }
+        return (
             <li key={value.price}>
                 <span className="order-data-cell text-left">{value.price}</span>
                 <span className="order-data-cell alt-color text-center">{value.size}</span>
-                <span className="order-data-cell alt-color text-right">1000000</span>
+                <span className="order-data-cell alt-color text-right">{green_total} <span className="progress-bar" ></span> </span>
             </li>
-        )
+        )}
     )
-    let sell_book_list = props.orderBook.data.sell_book.map((value, index) => 
-        (
+    let sell_book_list = props.orderBook.data.sell_book.map((value, index) => {
+        if(red_total === 0){
+            red_total = value.size
+        }else{
+            red_total = red_total + value.size
+        }        
+        return (
             <li key={value.price}>
                 <span className="order-data-cell text-left">{value.price}</span>
                 <span className="order-data-cell alt-color text-center">{value.size}</span>
-                <span className="order-data-cell alt-color text-right">1000000</span>
+                <span className="order-data-cell alt-color text-right">{red_total} <span className="progress-bar" ></span> </span>
             </li>
-        )
+        )}
     )
     return(
         <div style={{boxShadow:'0px 3px 3px 0px #e8e8e8'}}>

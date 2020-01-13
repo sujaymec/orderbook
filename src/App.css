@@ -69,8 +69,8 @@ ul.book-list li{
 }
 ul.book-list li:nth-child(even){background-color: #fbfbfd; }
 ul.book-list li:hover{font-weight: bold;background-color: #ece7ff;}
-#buy-book li{color:#e22943}
-#sell-book li{color:#45bd9d}
+#sell-book li{color:#e22943}
+#buy-book li{color:#45bd9d}
 .order-data-cell{width: 33.3%;}
 .order-data-cell.alt-color{color:#777}
 #last-traded{
