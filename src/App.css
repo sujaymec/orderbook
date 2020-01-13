@@ -14,12 +14,13 @@ body{font-family: 'Open Sans', sans-serif; padding:15px}
 
 /* Track - Background */
 ::-webkit-scrollbar-track {
-  background: #fff;
+  background: #fbfbfd;
 }
 
-/* Handle */
+/* Handle - Actual Bar*/
 ::-webkit-scrollbar-thumb {
-  background: #9d86f1;
+  background: #b3b3c7;
+  border-radius: 3px;
 }
 
 /* Handle on hover */
@@ -40,8 +41,8 @@ h1{
 #order-lists{height: calc(100vh - 110px); overflow-y: scroll;}
 ul.book-list li{
   padding: 0px 25px;
-  line-height: 25px; 
-  font-size: 12px;
+  line-height: 21px; 
+  font-size: 11px;
   /* font-weight: bold; */
   background-color: #fff;
   display: flex;
@@ -56,7 +57,7 @@ ul.book-list li:hover{font-weight: bold;background-color: #ece7ff;}
 .order-data-cell.alt-color{color:#777}
 #last-traded{
   background-color: #ffffff;
-  color: #623cea;
+  color: #6d6d6d;
   padding: 25px;
   font-weight: bold;
   border: 10px solid #fbfbfd;

@@ -26,7 +26,9 @@ export default function OrderBook(props){
             <div id="order-lists">
                 <ul id="sell-book" className="book-list">{sell_book_list}</ul>
                 <div id="last-traded" >
-                &#36;{props.orderBook.data.last_trade.price}
+                    <span>&#36;{props.orderBook.data.last_trade.price}</span>
+                    <span>Mark Price: </span>
+                
                 </div>
                 <ul id="buy-book" className="book-list">{buy_book_list}</ul>                  
             </div> 
