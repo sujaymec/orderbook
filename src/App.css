@@ -45,7 +45,7 @@ h1{
   display: flex;
   padding: 0px 20px;
 }
-#controls div{height: 30px; width: 30px; position:relative; margin-top:10px; margin-right:15px;}
+#controls div{height: 30px; width: 30px; position:relative; margin-top:10px; margin-right:15px; cursor: pointer;}
 #green-list, #full-list{background-color: #45bd9d}
 #full-list::before{
   content: '';

@@ -37,12 +37,13 @@ export default function OrderBook(props){
         <div style={{boxShadow:'0px 3px 3px 0px #e8e8e8'}}>
             <h1>Order Book</h1>
             <div id="controls">
-                <div id="green-list"></div>
-                <div id="full-list"></div>
-                <div id="red-list"></div>
+                <div id="red-list" onClick={() => {props.changeMode('red')}}></div>
+                <div id="full-list" onClick={() => {props.changeMode('full')}}></div>
+                <div id="green-list" onClick={() => {props.changeMode('green')}}></div>
             </div>
             <div id="order-lists">
-                <ul id="sell-book" className="book-list">{sell_book_list}</ul>
+                {(props.mode === 'red') ? <ul id="sell-book" className="book-list">{sell_book_list}</ul> : (props.mode === 'full') ? <ul id="sell-book" className="book-list">{sell_book_list}</ul> : ''}
+                
                 <div id="last-traded" >
                     <span style={{width:'60%'}} >&#36;{props.orderBook.data.last_trade.price}</span>
                     <span style={{width:'20%', fontWeight:'normal'}} className="text-right">Index Price : {props.orderBook.data.spot_price}</span>

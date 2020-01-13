@@ -9,9 +9,11 @@ export default class Home extends Component{
             orderBookLoaded: false,
             mode: 'full'
         }
+        this.changeMode = this.changeMode.bind(this)
     }
 
     changeMode(mode){
+        console.log(mode)
         this.setState({
             mode: mode
         })
@@ -21,10 +23,10 @@ export default class Home extends Component{
         setInterval(() => {
             axios.get("https://api.delta.exchange/orderbook/27/l2")
             .then(response => {
-            this.setState({
-                order_book: response,
-                orderBookLoaded: true
-            })
+                this.setState({
+                    order_book: response,
+                    orderBookLoaded: true
+                })
             })
         }, 1000)
 
