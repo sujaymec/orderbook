@@ -49,7 +49,7 @@ export default function OrderBook(props){
                     <span style={{width:'20%', fontWeight:'normal'}} className="text-right">Index Price : {props.orderBook.data.spot_price}</span>
                     <span style={{width:'20%', fontWeight:'normal'}} className="text-right">Mark Price :  {props.orderBook.data.mark_price}</span>
                 </div>
-                <ul id="buy-book" className="book-list">{buy_book_list}</ul>                  
+                {(props.mode === 'green') ? <ul id="buy-book" className="book-list">{buy_book_list}</ul> : (props.mode === 'full') ? <ul id="buy-book" className="book-list">{buy_book_list}</ul> : ''}   
             </div> 
 
         </div>
