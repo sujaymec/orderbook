@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import Child from './Child'
+import OrderBook from './OrderBook'
 import axios from 'axios'
 
 export default class Home extends Component{
@@ -12,13 +12,16 @@ export default class Home extends Component{
 
 
     getData(){
-        axios.get("https://api.delta.exchange/orderbook/27/l2")
-        .then(response => {
-          this.setState({
-              order_book: response,
-              orderBookLoaded: true
-          })
-        })
+        setInterval(() => {
+            axios.get("https://api.delta.exchange/orderbook/27/l2")
+            .then(response => {
+            this.setState({
+                order_book: response,
+                orderBookLoaded: true
+            })
+            })
+        }, 1000)
+
     }
 
 
@@ -33,7 +36,7 @@ export default class Home extends Component{
         }
         return(
             <React.Fragment>
-                <Child orderBook={this.state.order_book} />
+                <OrderBook orderBook={this.state.order_book} />
             </React.Fragment>
         )
     }
