@@ -1,23 +1,25 @@
 *{margin:0px; padding:0px}
 a{text-decoration: none; color: inherit}
 ul{list-style: none;}
-body{font-family: 'Open Sans', sans-serif;}
-
+body{font-family: 'Open Sans', sans-serif; padding:15px}
+.text-left{text-align: left;}
+.text-center{text-align: center;}
+.text-right{text-align: right;}
 /* Scrollbar */
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
-/* Track */
+/* Track - Background */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #fff;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #9d86f1;
 }
 
 /* Handle on hover */
@@ -29,21 +31,33 @@ body{font-family: 'Open Sans', sans-serif;}
 /*  */
 
 h1{
-  background:#2b2b2b;
+  background:#623cea;
   color:#fff;
-  padding: 25px;
-  text-align: center;
+  padding: 16px;
   text-transform: uppercase;
   font-size: 22px;
 }
-#order-lists{height: calc(100vh - 90px); overflow: hidden;}
-#order-lists:hover{overflow-y: scroll;}
-ul.book-list li{padding: 0px 15px;line-height: 25px; font-size: 12px;background-color: #e2e2e2; }
-ul.book-list li:nth-child(odd){background-color: #d6d6d6; }
-#buy-book li{color:#732323}
-#sell-book li{color:#23733c}
+#order-lists{height: calc(100vh - 110px); overflow-y: scroll;}
+ul.book-list li{
+  padding: 0px 25px;
+  line-height: 25px; 
+  font-size: 12px;
+  /* font-weight: bold; */
+  background-color: #fff;
+  display: flex;
+  border:1px solid #fbfbfb;
+  cursor: pointer; 
+}
+ul.book-list li:nth-child(odd){background-color: #fbfbfd; }
+ul.book-list li:hover{font-weight: bold;background-color: #ece7ff;}
+#buy-book li{color:#e22943}
+#sell-book li{color:#45bd9d}
+.order-data-cell{width: 33.3%;}
+.order-data-cell.alt-color{color:#777}
 #last-traded{
-  background-color: #9a9a9a;
-  color: #efefef;
+  background-color: #ffffff;
+  color: #623cea;
   padding: 25px;
+  font-weight: bold;
+  border: 10px solid #fbfbfd;
 }
