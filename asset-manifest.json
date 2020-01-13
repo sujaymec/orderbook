@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/orderbook/static/css/main.24a668a4.chunk.css",
+    "main.js": "/orderbook/static/js/main.2fc7faaf.chunk.js",
+    "main.js.map": "/orderbook/static/js/main.2fc7faaf.chunk.js.map",
+    "runtime-main.js": "/orderbook/static/js/runtime-main.9ffdcfed.js",
+    "runtime-main.js.map": "/orderbook/static/js/runtime-main.9ffdcfed.js.map",
+    "static/js/2.b4394486.chunk.js": "/orderbook/static/js/2.b4394486.chunk.js",
+    "static/js/2.b4394486.chunk.js.map": "/orderbook/static/js/2.b4394486.chunk.js.map",
+    "index.html": "/orderbook/index.html",
+    "precache-manifest.0e1d30a70db44dfb65da4542e6fb6377.js": "/orderbook/precache-manifest.0e1d30a70db44dfb65da4542e6fb6377.js",
+    "service-worker.js": "/orderbook/service-worker.js",
+    "static/css/main.24a668a4.chunk.css.map": "/orderbook/static/css/main.24a668a4.chunk.css.map",
+    "static/js/2.b4394486.chunk.js.LICENSE": "/orderbook/static/js/2.b4394486.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9ffdcfed.js",
+    "static/js/2.b4394486.chunk.js",
+    "static/css/main.24a668a4.chunk.css",
+    "static/js/main.2fc7faaf.chunk.js"
+  ]
+}
